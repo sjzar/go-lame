@@ -34,6 +34,7 @@ func (lw *LameWriter) Close() error {
 	if len(out) == 0 {
 		return nil
 	}
+	lw.Encoder.Close()
 	_, err := lw.output.Write(out)
 	return err
 }
