@@ -97,6 +97,10 @@ func (e *Encoder) SetInSamplerate(sampleRate int) {
 	C.lame_set_in_samplerate(e.handle, C.int(sampleRate))
 }
 
+func (e *Encoder) SetOutSamplerate(sampleRate int) {
+	C.lame_set_out_samplerate(e.handle, C.int(sampleRate))
+}
+
 func (e *Encoder) SetBitrate(bitRate int) {
 	C.lame_set_brate(e.handle, C.int(bitRate))
 }
@@ -159,6 +163,11 @@ func (e *Encoder) Quality() int {
 
 func (e *Encoder) InSamplerate() int {
 	sr := C.lame_get_in_samplerate(e.handle)
+	return int(sr)
+}
+
+func (e *Encoder) OutSamplerate() int {
+	sr := C.lame_get_out_samplerate(e.handle)
 	return int(sr)
 }
 
