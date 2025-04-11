@@ -3,6 +3,7 @@ package lame
 // http://www.leidinger.net/lame/doxy/html/lame_8h-source.html
 
 /*
+#cgo windows CFLAGS: -Wno-stringop-overflow -Wno-stringop-overread
 #cgo CFLAGS: -DHAVE_CONFIG_H -I./clame -Wno-shift-negative-value -Wno-tautological-pointer-compare -Wno-absolute-value
 #cgo LDFLAGS: -lm
 #include "lame.h"
