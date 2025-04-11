@@ -3,7 +3,7 @@ package lame
 // http://www.leidinger.net/lame/doxy/html/lame_8h-source.html
 
 /*
-#cgo CFLAGS: -DHAVE_CONFIG_H -I./clame
+#cgo CFLAGS: -DHAVE_CONFIG_H -I./clame -w
 #cgo LDFLAGS: -lm
 #include "lame.h"
 */
